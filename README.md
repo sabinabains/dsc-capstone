@@ -1,24 +1,35 @@
-# SOMETHING CATCHY: PREDICTING ALBUM SUCCESS USING COVER ART
+# PREDICTING TRACK SUCCESS ON SPOTIFY USING COVER ART
 
+A picture is said to be worth a thousand words, but does that saying still apply to album art? Before streaming services such as Spotify became the preferred format for music consumption, listeners would peruse the aisles of music stores, scanning the album artwork of CD's and Vinyl Records. During this time, album art likely played a role in whether the album was purchased or not. Our goal is to predict whether this still is true, and if so, determine which album covers are predicted to be most sucessful.
 
-# An elevator pitch
-- THIS SHOULD BE no more than a couple of sentences
-
-
-# A header image
-1280x640 pixels, but any image with landscape orientation (wider than it is tall) will work
-![alt text](path/to/image.png)
+![alt text](/images/cover_art_banner.jpeg)
 
 
 # Business Understanding and Data Understanding
-Explain the project context, using at least one citation to demonstrate your domain understanding, Consider including visualizations here as well
+
+Album art plays an important role in music. It gives visual representation and additional context to the story behind an album. Perhaps most importantly, it helps artists sell music. 
+
+
+The Playlist Effect. 
+(https://musicmachinery.com/2014/05/02/the-skip/)
+
+
+
+Nowadays, music marketing companies and design services are assuring the world that album art still plays a role in the success of the album and artists' music, but without backing. 
+
+
+<!-- Explain the project context, using at least one citation to demonstrate your domain understanding, Consider including visualizations here as well -->
 
 # Modeling and Evaluation
-What kind of model(s) did you use?
-How well did your final model perform, compared to the baseline?
+
+Convolutional Neural Networks were chosen for this analysis, as this model is built to take in images, and allows the computer to "see" and analyze images. 
+<!-- What kind of model(s) did you use?
+How well did your final model perform, compared to the baseline? -->
 
 # Conclusion
-How would you recommend that your model be used?
+<!-- How would you recommend that your model be used? -->
+
+recs - If album art is important to you, consider launching artists in vinyl, as this has seen a rise in sales, especially among the younger demographic
 
 # Repository Navigation
 An explanation of the repository organization
