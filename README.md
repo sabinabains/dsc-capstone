@@ -16,14 +16,6 @@ with Spotify leading the music streaming industry, it's crucial for record label
 
 This analysis will look at the popularity of tracks from Spotify's discovery playlists and their respective artwork to determine which album styles are associated with track success. 
 
-
-
-Skips:
-(https://musicmachinery.com/2014/05/02/the-skip/)
-
-Spotify is the largest music streaming service:
-https://toneisland.com/music-industry-statistics/
-
 # Data Understanding
 
 Data for this project was pulled from the Spotify API [Spotipy](https://spotipy.readthedocs.io/en/master/), however the data pulled for this analysis has also been saved in the [data folder]() of this repo. 
@@ -50,12 +42,11 @@ Epoch by Mean Squared Error | Scatterplot of True Vs. Predicted Values |
 
 # Conclusion
 
-Due to the model's MSE and R Squared score, it is evident this model has poor predicitve ability and should not be used to gauge an track's popularity on Spotify. A lack of predictability could serve as an insight in itself however, as it is highly possible that users no longer focus on album artwork. 
+Due to the model's MSE and R Squared score, it is evident this model has poor predicitve ability and should not be used to gauge a track's popularity on Spotify. A lack of predictability could serve as an insight in itself however, as it is highly possible that users no longer focus on album artwork. 
 
 With more time I would attempt to support the above theory by running the same analysis on albums from the 80's up to the early 2000's. I would also look into finding a different target variable to measure "success". Spotify's metric is based on recency, which therefore overlooks older music. It also rates popularity comparatively to other songs, which is problem a because songs that may be popular within their own genre could be understated due to the popularity of other genres. Lastly, I would run a NLP analysis on track name, and see if this has any effect on popularity among Spotify listeners. 
 
 # Repository Navigation
-
 
 ## Reproduction Instructions
 
@@ -65,10 +56,15 @@ If the user would like to rerun this analysis with the most current Spotify play
 
 ## Repository Structure
 
+
 ```
 ├── data : data used for modeling, includes album art and popularity index pulled from Spotify API
 ├── images : images used in PPT and README
+├── previous_files : older ppt and ipynb files
 ├── README.md : project information and repository structure
-├── .pptx : Presentation for Stakeholders
-└── .ipynb : Jupyter notebook used for modeling
+├── Spotify_API_pull.ipynb : notebook used to pull from API
+├── cnn_models.ipynb : modeling, including the final model
+├── helper_functions.ipynb : additional functions to support analyses
+├── model_1.ipynb : first model run, separated due to large processing times
+└── predicting_song_popularity_by_album_artwork.pptx : Presentation for stakeholders
 ```
