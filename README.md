@@ -24,6 +24,12 @@ The input variables are 1,835 album artworks from tracks in Spotify's "Fresh Fin
 
 the target variable is the track's popularity index, an integer between 0 and 100, with 100 being most popular. This is [defined as](https://developer.spotify.com/documentation/web-api/reference/#/operations/get-several-tracks) "The popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are. Generally speaking, songs that are being played a lot now will have a higher popularity than songs that were played a lot in the past."
 
+Preliminary analyses on album colors and average popularity do not show any correlation. 
+
+Album artwork was grouped by it's most common color and popularity index was averaged. Tracks with pink as it's most dominant color has a slightly higher average popularity score than the other colors.  | ![](/images/pop_by_dominant_color.png) |
+--- | --- |
+![](/images/pop_by_colored_image.png)  | Album artwork was grouped by whether the image was black and white or colored, and popularity index was averaged. Tracks with black and white only have a slightly higher popularity score than tracks with color in it's artwork.
+
 # Modeling and Evaluation
 
 For model input each album artwork was imported and resized to a 3 dimensional shape of (60, 60, 3), where each value in the height and width represents a pixel of the image, and the depth represents the R, G, B color values of the image. 
