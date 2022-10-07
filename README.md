@@ -6,19 +6,15 @@ A picture is said to be worth a thousand words, but does that saying still apply
 
 # Business Understanding
 
-<!--  Nowadays, music marketing companies and design services are assuring the world that album art still plays a role in the success of the album and artists' music, but without backing.  -->
-
 Album art has played an important role in music. It gives visual representation and additional context to the story behind an album. Perhaps most importantly, it helped artists sell music. Before streaming was introducted into the world of music, albums were largely judged by their artwork. Iconic albums such as "Abbey Road" by The Beatles and "Nevermind" by Nirvana have artwork that are still frequently talked about today. 
 
-However, in recent years streaming services such as Spotify have dominated, with streaming making up [80% of revenue](https://toneisland.com/music-industry-statistics/) in the U.S. music industry. Artists and labels have been left wondering if this shift from hard copies to streaming has affected the prominence of albums, and therefore album artwork. [The Playist Effect](https://blog.landr.com/album-art-absolutely-crucial-success-2016/) is a phenomenon that suggests with the rise of streaming, subscribers largest listen to curated auto-play playlists with individual tracks rather an albums as a whole. 
+However, in recent years streaming services such as Spotify have dominated, with streaming making up [80% of revenue](https://toneisland.com/music-industry-statistics/) in the U.S. music industry. Artists and labels have been left wondering if this shift from hard copies to streaming has affected the prominence of albums, and therefore album artwork. [The Playlist Effect](https://blog.landr.com/album-art-absolutely-crucial-success-2016/) is a phenomenon that suggests with the rise of streaming, subscribers largest listen to curated auto-play playlists with individual tracks rather an albums as a whole. 
 
-with Spotify leading the music streaming industry, it's crucial for record labels to understand the effectiveness of albums and their artwork in this space. 
-
-This analysis will look at the popularity of tracks from Spotify's discovery playlists and their respective artwork to determine which album styles are associated with track success. 
+with Spotify leading the music streaming industry, it's crucial for record labels to understand the effectiveness of albums and their artwork in this space. This analysis will look at the popularity of tracks from Spotify's discovery playlists and their respective artwork to determine which album styles are associated with track success. 
 
 # Data Understanding
 
-Data for this project was pulled from the Spotify API [Spotipy](https://spotipy.readthedocs.io/en/master/), however the data pulled for this analysis has also been saved in the [data folder]() of this repo. 
+Data for this project was pulled from the Spotify API [SpotiPy](https://spotipy.readthedocs.io/en/master/), however the data pulled for this analysis has also been saved in the [data folder]() of this repo. 
 
 The input variables are 1,835 album artworks from tracks in Spotify's "Fresh Finds" playlists. These playlists are solely comprised of independent artists and labels to eliminate potential outliers from hugely sucessful artists who will likely generate many streams regardless of album art. 
 
@@ -34,7 +30,7 @@ Album artwork was grouped by it's most common color and popularity index was ave
 
 For model input each album artwork was imported and resized to a 3 dimensional shape of (60, 60, 3), where each value in the height and width represents a pixel of the image, and the depth represents the R, G, B color values of the image. 
 
-![](/images/album_example.png) ![](/images/album_example2.png) ![](/images/album_example3.png) 
+![](/images/album_example2.png) ![](/images/album_example.png) ![](/images/album_example3.png) 
 
 Convolutional Neural Networks (CNN's) were chosen for this Image Classification Regression analysis. CNN layers are able to reduce the high dimensionality of images without losing its information, which will allow the computer to "view" each image at a hollistic level.
 
