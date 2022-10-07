@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Additional Files
+/data/spotipy_credentials.csv
+/data/spotipy_credentials.csv
