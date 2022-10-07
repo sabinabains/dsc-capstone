@@ -130,4 +130,7 @@ dmypy.json
 
 # Additional Files
 /data/spotipy_credentials.csv
-/data/spotipy_credentials.csv
+/data/.DS_Store
+/data/album_art/.DS_Store
+/data/album_art_resized/.DS_Store
+
