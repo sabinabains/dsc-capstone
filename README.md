@@ -16,11 +16,11 @@ with Spotify leading the music streaming industry, it's crucial for record label
 
 Data for this project was pulled from the Spotify API [SpotiPy](https://spotipy.readthedocs.io/en/master/), however the data pulled for this analysis has also been saved in the [data folder]() of this repo. 
 
-The input variables are 1,835 album artworks from tracks in Spotify's "Fresh Finds" playlists. These playlists are solely comprised of independent artists and labels to eliminate potential outliers from hugely sucessful artists who will likely generate many streams regardless of album art. 
+The input variables are 1,835 album artworks from tracks in Spotify's "Fresh Finds" playlists. These playlists are solely comprised of independent artists and labels to eliminate potential outliers from hugely sucessful artists who will likely generate many streams regardless of album art. The following genres/groups were included: Korea, Vietnam, Hip-Hop, Indie, Brasil, 2021, Folk, NZ, 2019, IE, Country, Dance, Latin, R&B, Rock, GSA, Jazz, Pop, Experimental, Italia, España, EDM, All Genres.
 
 the target variable is the track's popularity index, an integer between 0 and 100, with 100 being most popular. This is [defined as](https://developer.spotify.com/documentation/web-api/reference/#/operations/get-several-tracks) "The popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are. Generally speaking, songs that are being played a lot now will have a higher popularity than songs that were played a lot in the past."
 
-Preliminary analyses on album colors and average popularity do not show any correlation. 
+#### Preliminary analyses on album colors and average popularity do not show any correlation. 
 
 Album artwork was grouped by it's most common color and popularity index was averaged. Tracks with pink as it's most dominant color has a slightly higher average popularity score than the other colors.  | ![](/images/pop_by_dominant_color.png) |
 --- | --- |
@@ -32,11 +32,11 @@ For model input each album artwork was imported and resized to a 3 dimensional s
 
 ![](/images/album_example2.png) ![](/images/album_example.png) ![](/images/album_example3.png) 
 
-Convolutional Neural Networks (CNN's) were chosen for this Image Classification Regression analysis. CNN layers are able to reduce the high dimensionality of images without losing its information, which will allow the computer to "view" each image at a hollistic level.
+Convolutional Neural Networks (CNN's) were chosen for this Image Classification Regression analysis. CNN layers are able to reduce the high dimensionality of images without losing its information, which will allow the computer to "view" each image.
 
-The first model run kept the initial dimensions of Spotify album artwork, (664, 664, 3). with one CNN layer and Pooling layer. This model did not perform well, as it used too much computational power. 
+The first model run kept the initial dimensions of Spotify album artwork, (664, 664, 3). with one CNN layer and pooling layer. This model did not perform well, as it used too much computational power. 
 
-After resizing photos to (60, 60, 3) the models ran much faster. The remaining models tested involved adding / removing layers, increasing epochs, and tuning hyperparameters to find the lowest MSE score. The final model chosen generated an MSE of 144.9, with a filter size of 5 x 5, a pooling size of 2 x 2, linear activation, and no padding. Although this model outperformed the others, it is not an effective predictor for Spotify's popularity index. The scatterplot of true vs. predicted values demonstrate this, as well as it's R Squared score of 0. This score essentially tells us the model is about as efficient at predicting popularity than a simple averaging of popularity, 30.7, would be able to predict.
+After resizing photos to (60, 60, 3) the models ran much faster. The remaining models tested involved adding / removing layers, increasing epochs, and tuning hyperparameters to find the lowest MSE score. The final model chosen generated an MSE of 140, with a filter size of 3 x 3, a pooling size of 2 x 2, linear activation, and no padding. Although this model outperformed the others, it is not an effective predictor for Spotify's popularity index. The scatterplot of true vs. predicted values demonstrate this, as well as it's R Squared score of 0. This score essentially tells us the model is about as efficient at predicting popularity than a simple averaging of popularity, 30.1, would be able to predict.
 
 Epoch by Mean Squared Error | Scatterplot of True Vs. Predicted Values |
 --- | --- |
@@ -47,6 +47,11 @@ Epoch by Mean Squared Error | Scatterplot of True Vs. Predicted Values |
 Due to the model's MSE and R Squared score, it is evident this model has poor predicitve ability and should not be used to gauge a track's popularity on Spotify. A lack of predictability could serve as an insight in itself however, as it is highly possible that users no longer focus on album artwork. 
 
 With more time I would attempt to support the above theory by running the same analysis on albums from the 80's up to the early 2000's. I would also look into finding a different target variable to measure "success". Spotify's metric is based on recency, which therefore overlooks older music. It also rates popularity comparatively to other songs, which is problem a because songs that may be popular within their own genre could be understated due to the popularity of other genres. Lastly, I would run a NLP analysis on track name, and see if this has any effect on popularity among Spotify listeners. 
+
+#### Based on the above results, I would make three recommendations to the client. 
+- Consider allocating resources away from album art creation, as artwork style doesn’t seem to affect popularity on Spotify
+- Commission a study on album and/or song name to understand naming effect on Spotify popularity
+- If artwork context is crucial to telling the album story, consider other means of distribution outside of Spotify, such as physical stores, as users don’t seem engaged with artwork on Spotify 
 
 # Repository Navigation
 
@@ -60,6 +65,7 @@ If the user would like to rerun this analysis with the most current Spotify play
 
 
 ```
+├── PDFs : PDF files for submission
 ├── data : data used for modeling, includes album art and popularity index pulled from Spotify API
 ├── images : images used in PPT and README
 ├── previous_files : older ppt and ipynb files
