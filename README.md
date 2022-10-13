@@ -6,7 +6,7 @@ A picture is said to be worth a thousand words, but does that saying still apply
 
 # Business Understanding
 
-Album art has played an important role in music. It gives visual representation and additional context to the story behind an album. Perhaps most importantly, it helped artists sell music. Before streaming was introducted into the world of music, albums were largely judged by their artwork. Iconic albums such as "Abbey Road" by The Beatles and "Nevermind" by Nirvana have artwork that are still frequently talked about today. 
+Album art has played an important role in music. It gives visual representation and additional context to the story behind an album. Perhaps most importantly, it helped artists sell music. Before streaming was introduced into the world of music, albums were largely judged by their artwork. Iconic albums such as "Abbey Road" by The Beatles and "Nevermind" by Nirvana have artwork that are still frequently talked about today. 
 
 However, in recent years streaming services such as Spotify have dominated, with streaming making up [80% of revenue](https://toneisland.com/music-industry-statistics/) in the U.S. music industry. Artists and labels have been left wondering if this shift from hard copies to streaming has affected the prominence of albums, and therefore album artwork. [The Playlist Effect](https://blog.landr.com/album-art-absolutely-crucial-success-2016/) is a phenomenon that suggests with the rise of streaming, subscribers largest listen to curated auto-play playlists with individual tracks rather an albums as a whole. 
 
@@ -44,7 +44,7 @@ Epoch by Mean Squared Error | Scatterplot of True Vs. Predicted Values |
 
 # Conclusion
 
-Due to the model's MSE and R Squared score, it is evident this model has poor predicitve ability and should not be used to gauge a track's popularity on Spotify. A lack of predictability could serve as an insight in itself however, as it is highly possible that users no longer focus on album artwork. 
+Due to the model's MSE and R Squared score, it is evident this model has poor predictive ability and should not be used to gauge a track's popularity on Spotify. A lack of predictability could serve as an insight in itself however, as it is highly possible that users no longer focus on album artwork. 
 
 With more time I would attempt to support the above theory by running the same analysis on albums from the 80's up to the early 2000's. I would also look into finding a different target variable to measure "success". Spotify's metric is based on recency, which therefore overlooks older music. It also rates popularity comparatively to other songs, which is problem a because songs that may be popular within their own genre could be understated due to the popularity of other genres. Lastly, I would run a NLP analysis on track name, and see if this has any effect on popularity among Spotify listeners. 
 
