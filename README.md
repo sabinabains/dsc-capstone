@@ -1,4 +1,4 @@
-# PREDICTING TRACK SUCCESS ON SPOTIFY USING COVER ART
+# PREDICTING SONG POPULARITY ON SPOTIFY USING COVER ART
 
 A picture is said to be worth a thousand words, but does that saying still apply to album art? Before streaming services such as Spotify became the preferred format for music consumption, listeners would peruse the aisles of music stores, scanning the album artwork of CD's and Vinyl Records. During this time, album art likely played a role in whether the album was purchased or not. Our goal is to predict whether this still is true, and if so, determine which album covers are predicted to be most successful.
 
